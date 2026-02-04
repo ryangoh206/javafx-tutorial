@@ -97,8 +97,8 @@ public class Main extends Application {
     private void handleUserInput() {
         String userText = userInput.getText();
         String dukeText = duke.getResponse(userInput.getText());
-        dialogContainer.getChildren().addAll(new DialogBox(userText, userImage),
-                new DialogBox(dukeText, dukeImage));
+        dialogContainer.getChildren().addAll(DialogBox.getUserDialog(userText, userImage),
+                DialogBox.getDukeDialog(dukeText, dukeImage));
         userInput.clear();
     }
 
